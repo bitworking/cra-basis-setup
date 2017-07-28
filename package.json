@@ -6,7 +6,7 @@
     "prop-types": "^15.5.10",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
-    "styled-components": "^2.0.0"
+    "react-jss": "^7.0.2"
   },
   "devDependencies": {
     "backstopjs": "^2.6.11",

@@ -2,7 +2,7 @@
 
 exports[`renders Headline snapshot 1`] = `
 <h1
-  className="sc-bdVaJa ccXnHE"
+  className="atom_headline-0-1 atom_headline-0-0"
 >
   Test
 </h1>

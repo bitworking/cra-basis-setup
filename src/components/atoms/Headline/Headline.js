@@ -1,19 +1,20 @@
 import React from 'react';
-import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import defaultTheme from '../../../constants/themes/defaultTheme';
+import injectSheet from 'react-jss';
 
-const H1 = styled.h1`
-  font-size: 1.5em;
-  text-align: center;
-  color: ${props => (props.primary ? props.theme.colors.primary : props.theme.colors.default)};
-`;
-
-H1.defaultProps = {
-  theme: defaultTheme,
+const styles = {
+  atom_headline: {
+    'font-size': '1.5em',
+    'text-align': 'center',
+    color: props => (props.primary ? defaultTheme.colors.primary : defaultTheme.colors.default),
+  },
 };
 
-const Headline = props => <H1 {...props} />;
+const Headline = props =>
+  <h1 className={props.classes.atom_headline}>
+    {props.children}
+  </h1>;
 
 Headline.propTypes = {
   /** the headline text */
@@ -26,4 +27,4 @@ Headline.defaultProps = {
   primary: false,
 };
 
-export default Headline;
+export default injectSheet(styles)(Headline);
